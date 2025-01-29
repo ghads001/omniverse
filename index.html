@@ -1,0 +1,148 @@
+<title>WebSim: OmniVerse Explorer</title>
+<style>
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #0a0a2a;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+h1, h2 {
+    color: #4a90e2;
+    text-align: center;
+}
+.universe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+.universe-card {
+    background: rgba(74, 144, 226, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+.universe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
+}
+.universe-card h3 {
+    color: #4a90e2;
+    margin-top: 0;
+}
+.explore-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #4a90e2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+.explore-btn:hover {
+    background: #3a7bc8;
+}
+#multiverse-portal {
+    width: 200px;
+    height: 200px;
+    margin: 40px auto;
+    background: conic-gradient(from 0deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff, #5f27cd);
+    border-radius: 50%;
+    animation: portal-spin 10s linear infinite;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+@keyframes portal-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>WebSim: OmniVerse Explorer</h1>
+    <p>Welcome to the OmniVerse Explorer, your gateway to infinite realities across the multiverse. Here, you can explore various fictional universes, alternate histories, and even create your own! The possibilities are endless.</p>
+    
+    <div id="multiverse-portal"></div>
+    
+    <h2>Featured Universes</h2>
+    <div class="universe-grid">
+        <div class="universe-card">
+            <h3>Marvel Cinematic Multiverse</h3>
+            <p>Explore the vast multiverse of Marvel, including the MCU, alternate realities, and animated universes.</p>
+            <a href="https://websim.ai/marvel-multiverse" class="explore-btn">Enter Marvel Multiverse</a>
+        </div>
+        
+        <div class="universe-card">
+            <h3>DC Extended Multiverse</h3>
+            <p>Dive into the DC multiverse, featuring various iterations of iconic heroes and villains across different Earths.</p>
+            <a href="https://websim.ai/dc-multiverse" class="explore-btn">Explore DC Multiverse</a>
+        </div>
+        
+        <div class="universe-card">
+            <h3>Star Wars Galaxy</h3>
+            <p>Journey to a galaxy far, far away, exploring both canon and Legends timelines in the Star Wars universe.</p>
+            <a href="https://websim.ai/star-wars-galaxy" class="explore-btn">Visit Star Wars Galaxy</a>
+        </div>
+        
+        <div class="universe-card">
+            <h3>Alternate Histories</h3>
+            <p>Discover worlds where history took a different turn, from ancient civilizations to modern-day scenarios.</p>
+            <a href="https://websim.ai/alternate-histories" class="explore-btn">Rewrite History</a>
+        </div>
+        
+        <div class="universe-card">
+            <h3>Sci-Fi Futures</h3>
+            <p>Explore potential futures of humanity, from utopian societies to dystopian wastelands and everything in between.</p>
+            <a href="https://websim.ai/sci-fi-futures" class="explore-btn">Glimpse the Future</a>
+        </div>
+        
+        <div class="universe-card">
+            <h3>Fantasy Realms</h3>
+            <p>Enter magical worlds filled with mythical creatures, ancient prophecies, and epic quests.</p>
+            <a href="https://websim.ai/fantasy-realms" class="explore-btn">Embark on Adventure</a>
+        </div>
+    </div>
+    
+    <h2>Create Your Own Universe</h2>
+    <p>The multiverse is infinite, and so is your imagination! Use our Universe Creator tool to design and explore your own unique reality.</p>
+    <a href="https://websim.ai/universe-creator" class="explore-btn">Create Universe</a>
+    
+    <h2>Multiverse News and Updates</h2>
+    <ul>
+        <li><a href="https://websim.ai/news/multiverse-expansion">Recent Multiverse Expansions</a></li>
+        <li><a href="https://websim.ai/news/crossover-events">Upcoming Crossover Events</a></li>
+        <li><a href="https://websim.ai/news/reality-anomalies">Detected Reality Anomalies</a></li>
+    </ul>
+    
+    <p>Remember, in the vast expanse of the OmniVerse, every possibility exists somewhere. Happy exploring!</p>
+</div>
+
+<script>
+document.querySelectorAll('.universe-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-10px) scale(1.05)';
+    });
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0) scale(1)';
+    });
+});
+
+const portal = document.getElementById('multiverse-portal');
+portal.addEventListener('click', () => {
+    portal.style.animation = 'portal-spin 2s linear infinite';
+    setTimeout(() => {
+        window.location.href = 'https://websim.ai/random-universe';
+    }, 2000);
+});
+</script>
+
+</body></html>
